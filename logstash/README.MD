@@ -15,5 +15,5 @@ CH_USER=cloudhubuser \
 CH_PASSWORD=cloudhubpassword \
 CH_ENV=Production \
 NUM_LOG_LINES=300 \
-bin/logstash -f ../elastic-cloudhub-observability/logstash/get_cloudhub_app_logs.conf -r -w 1
+logstash -f logstash/get_cloudhub_app_logs.conf -r -w 1
 ```
