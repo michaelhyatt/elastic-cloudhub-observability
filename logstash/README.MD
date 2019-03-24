@@ -1,4 +1,5 @@
 ## Logstash synchronisation of CloudHub data into Elasticsearch
+(Kibana1)[../images/kibana1.png]
 
 ### get_cloudhub_app_logs.conf
 This config authenticates to CloudHub and performs synchronisation of all application logs for a particular environment.
