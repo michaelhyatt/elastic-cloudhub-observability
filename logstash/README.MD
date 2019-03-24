@@ -4,6 +4,12 @@
 This config authenticates to CloudHub and performs synchronisation of all application logs for a particular environment.
 
 Command to run:
-```bash
-CH_USER=cloudhubuser CH_PASSWORD=chuserpassword123 CH_ENV=Production bin/logstash -f get_cloudhub_app_logs.conf
+```sh
+ES_USER=elastic \
+ES_HOST=https://eshost:9200 \
+ES_PASS=espass \
+CH_USER=cloudhubuser \
+CH_PASSWORD=cloudhubpassword \
+CH_ENV=Production \
+bin/logstash -f ../elastic-cloudhub-observability/logstash/get_cloudhub_app_logs.conf -r -w 1
 ```
