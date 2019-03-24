@@ -5,6 +5,8 @@ This config authenticates to CloudHub and performs synchronisation of all applic
 
 Command to run:
 ```sh
+cd elastic-cloudhub-observability
+
 ES_USER=elastic \
 ES_HOST=https://eshost:9200 \
 ES_PASS=espass \

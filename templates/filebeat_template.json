@@ -1,0 +1,65 @@
+{
+  "template" : "filebeat-*",
+  "version" : 50001,
+  "settings" : {
+    "index.refresh_interval" : "5s"
+  },
+  "mappings" : {
+    "doc" : {
+      "properties" : {
+        "@timestamp" : {
+          "type" : "date"
+        },
+        "app_name" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "deployment_id" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "environment_id" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "environment_name" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "instance_id" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "line" : {
+          "type" : "long"
+        },
+        "logger_name" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "message" : {
+          "type" : "text"
+        },
+        "organization_id" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "priority" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "record_id" : {
+          "enabled": false
+        },
+        "thread_name" : {
+          "enabled": false
+        }
+      }
+    }
+  }
+}
