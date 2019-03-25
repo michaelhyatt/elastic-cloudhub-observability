@@ -1,0 +1,6 @@
+- pipeline.id: login
+  path.config: logstash/login.conf
+  queue.type: persisted
+- pipeline.id: logs
+  path.config: logstash/get_cloudhub_app_logs.conf
+  queue.type: persisted
