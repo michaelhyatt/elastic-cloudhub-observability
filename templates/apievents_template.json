@@ -1,0 +1,174 @@
+{
+  "template" : "apievents-*",
+  "version" : 50001,
+  "settings" : {
+      "index.refresh_interval" : "5s"
+    },
+  "mappings" : {
+    "doc" : {
+      "properties" : {
+        "@timestamp" : {
+          "type" : "date"
+        },
+        "@version" : {
+          "type" : "long"
+        },
+        "api_id" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "api_name" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "api_version_id" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "api_version_name" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "application_name" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "browser" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "city" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "client_ip" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "continent" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "country" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "environment_id" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "environment_name" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "hw_platform" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "message_id" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "os_family" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "os_major_version" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "os_minor_version" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "os_version" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "application" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "runtime_host" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "postal_code" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "request_outcome" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "resource_path" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "response_time" : {
+          "type" : "long"
+        },
+        "request_size" : {
+          "type" : "long"
+        },
+        "response_size" : {
+          "type" : "long"
+        },
+        "status_code" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "timezone" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "user_agent_name" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "user_agent_version" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "verb" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "violated_policy_name" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -10,6 +10,9 @@
         "@timestamp" : {
           "type" : "date"
         },
+        "@version" : {
+          "type" : "long"
+        },
         "app_name" : {
           "type" : "text",
           "fields" : {
