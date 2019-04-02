@@ -52,8 +52,7 @@
           "ignore_above" : 256
         },
         "client_ip" : {
-          "type" : "keyword",
-          "ignore_above" : 256
+          "type" : "ip"
         },
         "continent" : {
           "type" : "keyword",
