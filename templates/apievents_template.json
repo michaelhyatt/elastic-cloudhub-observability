@@ -54,6 +54,9 @@
         "client_ip" : {
           "type" : "ip"
         },
+        "geoip.location": {
+          "type": "geo_point"
+        },
         "continent" : {
           "type" : "keyword",
           "ignore_above" : 256
