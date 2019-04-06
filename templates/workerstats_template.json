@@ -1,0 +1,46 @@
+{
+  "template" : "workerstats-*",
+  "version" : 50001,
+  "settings" : {
+    "index.refresh_interval" : "5s"
+  },
+  "mappings" : {
+    "doc" : {
+      "properties" : {
+        "@timestamp" : {
+          "type" : "date"
+        },
+        "@version" : {
+          "type" : "long"
+        },
+        "app_name" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "environment_id" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "environment_name" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "organization_id" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "val_type" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "value" : {
+          "type" : "long"
+        },
+        "worker" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        }
+      }
+    }
+  }
+}
