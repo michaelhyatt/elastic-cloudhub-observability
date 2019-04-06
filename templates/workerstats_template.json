@@ -14,8 +14,13 @@
           "type" : "long"
         },
         "app_name" : {
-          "type" : "keyword",
-          "ignore_above" : 256
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
         },
         "environment_id" : {
           "type" : "keyword",
