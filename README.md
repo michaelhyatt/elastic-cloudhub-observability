@@ -5,6 +5,15 @@ This pipeline config authenticates to CloudHub and performs synchronisation of a
 ![Kibana1](images/kibana1.png)
 ![Kibana2](images/kibana2.png)
 
+#### After installing logstash
+After installing logstash, make sure to install the following plugins
+```
+bin/logstash-plugin install logstash-filter-prune
+bin/logstash-plugin install logstash-filter-http
+bin/logstash-plugin install logstash-filter-split
+bin/logstash-plugin install logstash-filter-geoip
+```
+
 #### Initialising Kibana
 Go to Management => saved objects and import the following 3 files to initialise all Kibana objects:
 ```
