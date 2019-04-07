@@ -1,12 +1,16 @@
 - pipeline.id: login
   path.config: logstash/login.conf
   queue.type: persisted
-# - pipeline.id: logs
-#   path.config: logstash/get_cloudhub_app_logs.conf
-#   queue.type: persisted
-# - pipeline.id: api-events
-#   path.config: logstash/get_api_events.conf
-#   queue.type: persisted
+  pipeline.workers: 3
+- pipeline.id: logs
+  path.config: logstash/get_cloudhub_app_logs.conf
+  queue.type: persisted
+  pipeline.workers: 3
+- pipeline.id: api-events
+  path.config: logstash/get_api_events.conf
+  queue.type: persisted
+  pipeline.workers: 3
 - pipeline.id: worker-stats
   path.config: logstash/get_worker_stats.conf
   queue.type: persisted
+  pipeline.workers: 3
