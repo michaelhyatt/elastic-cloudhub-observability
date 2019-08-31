@@ -1,0 +1,72 @@
+{
+  "index_patterns": "cloudhub-logs-*",
+  "version": 50001,
+  "settings": {
+    "index.refresh_interval": "10s",
+    "number_of_shards": 1,
+    "number_of_replicas": 1
+  },
+  "mappings": {
+    "properties": {
+      "@timestamp": {
+        "type": "date"
+      },
+      "@version": {
+        "type": "long"
+      },
+      "app_name": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "deployment_id": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "environment.id": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "environment.name": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "service.id": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "line": {
+        "type": "long"
+      },
+      "log.logger": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "message": {
+        "type": "text"
+      },
+      "organization.id": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "log.level": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "record_id": {
+        "enabled": false
+      },
+      "log.thread": {
+        "enabled": false
+      },
+      "ecs.version": {
+        "type": "keyword",
+        "ignore_above": 256
+      }
+    }
+  }
+}
